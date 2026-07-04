@@ -465,7 +465,29 @@ color:#d6dce8;
           elevationRisk = 5;
         }
 
-        const demoRainRisk = 18;
+        let demoRainRisk = 0;
+
+const weatherResponse = await fetch(
+  `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&hourly=precipitation&forecast_days=1&timezone=auto&precipitation_unit=inch`
+);
+
+const weatherData = await weatherResponse.json();
+
+const nextRain = weatherData.hourly.precipitation.slice(0, 12);
+const totalRain = nextRain.reduce((sum, amount) => sum + amount, 0);
+
+if (totalRain >= 2) {
+  demoRainRisk = 35;
+} else if (totalRain >= 1) {
+  demoRainRisk = 25;
+} else if (totalRain >= 0.25) {
+  demoRainRisk = 12;
+} else {
+  demoRainRisk = 3;
+}
+
+document.getElementById('rainfallOutlook').innerText =
+  totalRain.toFixed(2) + ' inches expected next 12 hrs';
         const demoGaugeRisk = 12;
 
         const demoTideRisk = 15; // later this will come from NOAA tide data
@@ -526,8 +548,7 @@ document.getElementById("whyList").innerHTML =
     reasons.map(r => `<li>${r}</li>`).join("");
         document.getElementById('rainfallOutlook').innerText =
           'Demo factor active';
-        document.getElementById('gaugeDistance').innerText =
-          'Demo factor active';
+        
 
         document.getElementById('resultCard').scrollIntoView({
           behavior: 'smooth'
