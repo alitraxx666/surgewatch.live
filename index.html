@@ -494,6 +494,24 @@ const demoRainRisk = backendData.rainRisk || 3;
 );
 
 const femaData = await femaResponse.json();
+          const usgsResponse = await fetch(
+  "https://mlwjgbyvikhpxrthvdec.supabase.co/functions/v1/usgs",
+  {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      lat,
+      lon
+    })
+  }
+);
+
+const usgsData = await usgsResponse.json();
+
+document.getElementById("gaugeDistance").innerText =
+  usgsData.gauge;
 
 document.getElementById("femaZone").innerText =
   femaData.zone;
