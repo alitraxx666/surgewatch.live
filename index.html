@@ -432,12 +432,8 @@ color:#d6dce8;
 
         let alertRisk = 0;
 
-let alertRisk = 0;
-
 document.getElementById('realAlertStatus').innerText =
   'NWS check paused';
-}
-        }
 
         let elevationRisk = 0;
 
@@ -475,30 +471,10 @@ document.getElementById("rainfallOutlook").innerText =
 
 let demoTideRisk = 0;
 
-const tideStation = "8518750"; // The Battery, NY - useful for Hoboken / NYC harbor
-const today = new Date();
-const yyyyMMdd = today.toISOString().slice(0, 10).replaceAll("-", "");
+let demoTideRisk = 0;
 
-const tideResponse = await fetch(
-  `https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?product=predictions&application=SurgeWatch&begin_date=${yyyyMMdd}&range=24&datum=MLLW&station=${tideStation}&time_zone=lst_ldt&units=english&interval=hilo&format=json`
-);
-
-const tideData = await tideResponse.json();
-
-let nextHighTideText = "No high tide found today";
-
-if (tideData.predictions && tideData.predictions.length > 0) {
-  const highTides = tideData.predictions.filter(tide => tide.type === "H");
-
-  if (highTides.length > 0) {
-    const nextHigh = highTides[0];
-    nextHighTideText = `${nextHigh.t} / ${nextHigh.v} ft`;
-
-    demoTideRisk = 15;
-  }
-}
-
-document.getElementById("tideOverlap").innerText = nextHighTideText;// later this will come from NOAA tide data
+document.getElementById("tideOverlap").innerText =
+  "Backend coming soon";// later this will come from NOAA tide data
 const demoDrainageRisk = 10; // later this can use pavement/drainage data
 
 const surgeScore = Math.min(
