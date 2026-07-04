@@ -463,10 +463,12 @@ document.getElementById('realAlertStatus').innerText =
 
 const backendData = await backendResponse.json();
 
-const demoRainRisk = backendData.rainRisk;
+console.log("Backend data:", backendData);
+
+const demoRainRisk = backendData.rainRisk || 3;
 
 document.getElementById("rainfallOutlook").innerText =
-  backendData.message;
+  backendData.message || "Backend rainfall unavailable";
         const demoGaugeRisk = 12;
 
 let demoTideRisk = 0;
