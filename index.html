@@ -21,10 +21,10 @@
       --orange: #ff9a00;
       --red: #ff2e1f;
       --blue: #4cb5ff;
+      --purple: #c16cff;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
-
     html { scroll-behavior: smooth; }
 
     body {
@@ -57,9 +57,9 @@
       display: flex;
       align-items: center;
       gap: 14px;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.08em;
       font-weight: 950;
-      font-size: 1.05rem;
+      font-size: 1.1rem;
     }
 
     .mark {
@@ -68,68 +68,62 @@
       border: 3px solid var(--yellow);
       border-radius: 50%;
       position: relative;
-      flex: 0 0 auto;
     }
 
     .mark::after {
       content: "";
       position: absolute;
-      left: 7px;
-      right: 7px;
-      bottom: 10px;
+      left: 6px;
+      right: 6px;
+      bottom: 8px;
       height: 8px;
       border-bottom: 3px solid var(--yellow);
       border-radius: 50%;
-      transform: rotate(-5deg);
+      transform: rotate(-8deg);
     }
 
     nav {
       display: flex;
-      gap: 28px;
+      gap: 22px;
       color: var(--muted);
-      font-size: 0.96rem;
-      align-items: center;
+      font-size: 0.9rem;
     }
 
     .hero {
-      min-height: calc(100vh - 96px);
-      padding: 58px 0 38px;
+      padding: 34px 0 70px;
       display: grid;
-      grid-template-columns: 1fr 0.95fr;
-      gap: 58px;
+      grid-template-columns: 1.04fr 0.96fr;
+      gap: 46px;
       align-items: start;
     }
 
-    .hero-copy {
-      padding-top: 12px;
-    }
+    .hero-copy { padding-top: 18px; }
 
     .eyebrow {
       color: var(--yellow);
       text-transform: uppercase;
-      letter-spacing: 0.24em;
+      letter-spacing: 0.22em;
       font-size: 0.82rem;
       font-weight: 900;
       margin-bottom: 18px;
     }
 
     h1 {
-      font-size: clamp(3.4rem, 7vw, 6.9rem);
+      font-size: clamp(3rem, 7.7vw, 6.45rem);
       line-height: 0.9;
       letter-spacing: -0.08em;
       font-weight: 950;
-      margin-bottom: 26px;
-      max-width: 760px;
+      margin-bottom: 24px;
     }
 
     h1 span { color: var(--yellow); }
 
     .subtitle {
-      font-size: clamp(1.04rem, 1.7vw, 1.22rem);
-      line-height: 1.62;
+      font-size: clamp(1.03rem, 1.8vw, 1.25rem);
+      line-height: 1.65;
       color: var(--muted);
-      max-width: 650px;
-      margin-bottom: 26px;
+      max-width: 680px;
+      margin-bottom: 28px;
     }
 
     .actions {
@@ -137,16 +131,15 @@
       flex-wrap: wrap;
       gap: 14px;
       align-items: center;
-      margin-bottom: 30px;
     }
 
     input {
-      padding: 15px 18px;
+      padding: 14px 18px;
       border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.17);
+      border: 1px solid rgba(255,255,255,0.14);
       background: rgba(255,255,255,0.06);
       color: white;
-      min-width: 315px;
+      min-width: 300px;
       font-size: 0.95rem;
       outline: none;
     }
@@ -157,7 +150,7 @@
       border: 1px solid var(--yellow);
       background: var(--yellow);
       color: #050814;
-      padding: 15px 22px;
+      padding: 14px 20px;
       font-weight: 950;
       text-transform: uppercase;
       letter-spacing: 0.08em;
@@ -165,118 +158,97 @@
       text-decoration: none;
       font-size: 0.8rem;
       cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      box-shadow: 0 0 0 2px rgba(255,255,255,0.7) inset;
     }
 
     .button.secondary {
       background: transparent;
       color: var(--white);
       border-color: var(--line);
-      box-shadow: none;
     }
-
-    .quick-layers {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
-      margin-top: 20px;
-      max-width: 700px;
-    }
-
-    .layer {
-      border-left: 1px solid var(--line);
-      padding-left: 16px;
-      min-height: 92px;
-    }
-
-    .layer:first-child { border-left: none; padding-left: 0; }
-
-    .layer-icon {
-      color: var(--yellow);
-      font-size: 1.65rem;
-      line-height: 1;
-      margin-bottom: 8px;
-    }
-
-    .layer b { display: block; font-size: 0.9rem; margin-bottom: 5px; }
-    .layer span { display: block; color: var(--muted); font-size: 0.82rem; line-height: 1.35; }
 
     .card, .feature, .waitlist {
       border: 1px solid var(--line);
-      background: linear-gradient(145deg, rgba(255,255,255,0.06), rgba(255,255,255,0.025));
+      background: rgba(255, 255, 255, 0.045);
       border-radius: 28px;
     }
 
     .card {
-      padding: 26px;
-      box-shadow: 0 28px 90px rgba(0, 0, 0, 0.34);
+      padding: 24px;
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.28);
       position: sticky;
-      top: 22px;
+      top: 18px;
     }
+
+    .quick-layers {
+      margin-top: 30px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.035);
+      border-radius: 24px;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .layer {
+      border-left: 2px solid rgba(255,246,0,0.45);
+      padding-left: 14px;
+      display: grid;
+      gap: 6px;
+    }
+
+    .layer-icon { color: var(--yellow); font-weight: 950; }
+    .layer b { color: var(--white); }
+    .layer span { color: var(--muted); font-size: 0.9rem; line-height: 1.35; }
 
     .score-top {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
       gap: 18px;
-      margin-bottom: 18px;
+      margin-bottom: 16px;
     }
 
     .score-title {
-      font-size: 0.86rem;
-      letter-spacing: 0.22em;
-      color: var(--white);
+      color: var(--yellow);
       text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-weight: 900;
+      font-size: 0.82rem;
       margin-bottom: 8px;
     }
 
     .score-number-wrap {
       display: flex;
-      align-items: flex-end;
-      gap: 12px;
+      align-items: baseline;
+      gap: 8px;
     }
 
     .score-number-wrap strong {
-      font-size: 3.8rem;
-      line-height: 0.9;
+      font-size: 3.4rem;
       color: var(--yellow);
-      letter-spacing: -0.04em;
+      line-height: 0.9;
     }
 
-    .score-number-wrap span {
-      font-size: 1.45rem;
-      color: var(--muted);
-      font-weight: 850;
-      margin-bottom: 7px;
-    }
-
-
-    .score-window-label {
-      color: var(--muted);
-      font-size: 0.9rem;
-      font-weight: 800;
-      margin-top: 6px;
-      letter-spacing: 0.02em;
-    }
+    .score-number-wrap span { color: var(--muted); font-weight: 900; }
+    .score-window-label { color: var(--muted); margin-top: 8px; font-size: 0.9rem; }
 
     .window-selector {
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-      padding: 14px 0;
-      margin: 8px 0 18px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.035);
+      border-radius: 18px;
+      padding: 12px;
+      margin-bottom: 16px;
+      display: grid;
+      gap: 10px;
     }
 
     .window-label {
       color: var(--muted);
-      font-size: 0.78rem;
-      font-weight: 900;
-      letter-spacing: 0.16em;
+      font-size: 0.76rem;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
-      margin-bottom: 10px;
+      font-weight: 900;
     }
 
     .window-buttons {
@@ -286,21 +258,18 @@
     }
 
     .window-btn {
-      border: 1px solid rgba(248,250,252,0.18);
-      background: rgba(255,255,255,0.045);
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.035);
       color: var(--white);
       border-radius: 999px;
       padding: 9px 8px;
-      font-size: 0.72rem;
-      font-weight: 900;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
       cursor: pointer;
-      transition: all 0.2s ease;
+      font-weight: 950;
+      font-size: 0.78rem;
+      transition: 0.18s ease;
     }
 
-    .window-btn:hover,
-    .window-btn.active {
+    .window-btn:hover, .window-btn.active {
       border-color: var(--yellow);
       background: var(--yellow);
       color: #061026;
@@ -318,16 +287,8 @@
       white-space: nowrap;
     }
 
-    .risk-scale {
-      margin: 16px 0 22px;
-      padding-bottom: 4px;
-    }
-
-    .bar-wrap {
-      position: relative;
-      height: 34px;
-      margin: 8px 0 2px;
-    }
+    .risk-scale { margin: 16px 0 22px; padding-bottom: 4px; }
+    .bar-wrap { position: relative; height: 34px; margin: 8px 0 2px; }
 
     .risk-bar {
       position: absolute;
@@ -343,7 +304,7 @@
     .risk-pointer {
       position: absolute;
       top: 0;
-      left: calc(var(--score-pos, 35) * 1%);
+      left: calc(var(--score-pos, 0) * 1%);
       transform: translateX(-50%);
       text-align: center;
       transition: left 0.4s ease;
@@ -377,10 +338,7 @@
       font-weight: 800;
     }
 
-    .scale-numbers {
-      font-size: 0.9rem;
-      margin-top: 2px;
-    }
+    .scale-numbers { font-size: 0.9rem; margin-top: 2px; }
     .scale-numbers span:nth-child(2), .scale-labels span:nth-child(2) { text-align: center; }
     .scale-numbers span:nth-child(3), .scale-labels span:nth-child(3) { text-align: center; }
     .scale-numbers span:nth-child(4), .scale-labels span:nth-child(4) { text-align: right; }
@@ -421,25 +379,24 @@
     .metric b.ready { color: var(--green); }
     .metric b.linkish { color: var(--blue); }
 
-    .section-title {
-      font-size: 0.85rem;
-      letter-spacing: 0.22em;
-      color: var(--yellow);
-      text-transform: uppercase;
-      margin-bottom: 18px;
-    }
-
-    .assessment {
+    .score-breakdown, .assessment {
       margin-top: 22px;
       border-top: 1px solid var(--line);
       padding-top: 20px;
     }
 
-    .assessment h3 {
+    .score-breakdown h3, .assessment h3 {
       color: var(--yellow);
       font-size: 1.06rem;
-      margin-bottom: 11px;
+      margin-bottom: 12px;
     }
+
+    .breakdown-list { display: grid; gap: 10px; }
+    .breakdown-row { display: grid; grid-template-columns: 1fr 72px; gap: 12px; align-items: center; }
+    .breakdown-name { color: #d6dce8; font-size: 0.88rem; }
+    .breakdown-score { color: var(--white); font-weight: 900; text-align: right; font-size: 0.86rem; }
+    .component-bar { grid-column: 1 / -1; height: 7px; background: rgba(255,255,255,0.09); border-radius: 999px; overflow: hidden; margin-top: -4px; }
+    .component-fill { height: 100%; border-radius: 999px; background: linear-gradient(90deg, var(--green), var(--yellow), var(--orange)); width: 0%; transition: width 0.35s ease; }
 
     #whyList {
       list-style: none;
@@ -468,6 +425,14 @@
       line-height: 1.55;
       margin-top: 14px;
       font-size: 0.94rem;
+    }
+
+    .section-title {
+      font-size: 0.85rem;
+      letter-spacing: 0.22em;
+      color: var(--yellow);
+      text-transform: uppercase;
+      margin-bottom: 18px;
     }
 
     .features {
@@ -506,7 +471,6 @@
       .hero { grid-template-columns: 1fr; padding-top: 42px; }
       .card { position: static; }
       .quick-layers { grid-template-columns: repeat(2, 1fr); }
-      .layer:nth-child(3) { border-left: none; padding-left: 0; }
     }
 
     @media (max-width: 800px) {
@@ -543,39 +507,39 @@
 
     <section class="hero">
       <div class="hero-copy">
-        <div class="eyebrow">Live climatic & geologic intelligence</div>
+        <div class="eyebrow">Live site intelligence</div>
         <h1>Know before<br />the water <span>surges.</span></h1>
 
         <p class="subtitle">
-          SurgeWatch monitors live weather, river levels, elevation, geology, and flood-risk data for any address — then turns it into clear insights and smart action.
+          SurgeWatch monitors live weather, river levels, elevation, FEMA flood data, and site conditions for any address — then turns them into a clear flood-risk score.
         </p>
 
         <div class="actions">
           <input type="text" id="addressInput" placeholder="Enter an address or ZIP code" />
           <button class="button" onclick="runSurgeWatch()">Check Flood Risk</button>
-          <a class="button secondary" href="#features">▱ View Live Map</a>
+          <a class="button secondary" href="#features">▱ View Concept</a>
         </div>
 
         <div class="quick-layers" aria-label="SurgeWatch data layers">
           <div class="layer">
             <div class="layer-icon">☁</div>
             <b>Live Weather</b>
-            <span>Real-time forecasts and alerts</span>
+            <span>Rainfall forecasts and official flood alerts</span>
           </div>
           <div class="layer">
             <div class="layer-icon">≋</div>
-            <b>River & Tide Levels</b>
-            <span>USGS gauges and tide monitoring</span>
+            <b>River & Water Levels</b>
+            <span>Nearest USGS gauges and future tide monitoring</span>
+          </div>
+          <div class="layer">
+            <div class="layer-icon">△</div>
+            <b>Elevation & Terrain</b>
+            <span>Ground elevation and future slope analysis</span>
           </div>
           <div class="layer">
             <div class="layer-icon">◎</div>
-            <b>Elevation & Geology</b>
-            <span>Topography and future geologic context</span>
-          </div>
-          <div class="layer">
-            <div class="layer-icon">▱</div>
-            <b>Flood Intelligence</b>
-            <span>FEMA data and risk scoring</span>
+            <b>Engineering Site Profile™</b>
+            <span>Future soil, geology, drainage, and foundation context</span>
           </div>
         </div>
       </div>
@@ -588,7 +552,7 @@
               <strong id="scoreNumber">--</strong>
               <span>/ 100</span>
             </div>
-            <div class="score-window-label" id="scoreWindowLabel">Window: Next 12 hours</div>
+            <div class="score-window-label" id="scoreWindowLabel">Window: Next 24 hours</div>
           </div>
           <div class="pill" id="riskLevel">READY</div>
         </div>
@@ -596,9 +560,9 @@
         <div class="window-selector" aria-label="Flood risk time window">
           <div class="window-label">Risk Window</div>
           <div class="window-buttons">
-            <button type="button" class="window-btn" data-hours="0" onclick="setRiskWindow(0)">Now</button>
-            <button type="button" class="window-btn active" data-hours="12" onclick="setRiskWindow(12)">12 hrs</button>
-            <button type="button" class="window-btn" data-hours="24" onclick="setRiskWindow(24)">24 hrs</button>
+            <button type="button" class="window-btn" data-hours="1" onclick="setRiskWindow(1)">Now</button>
+            <button type="button" class="window-btn" data-hours="12" onclick="setRiskWindow(12)">12 hrs</button>
+            <button type="button" class="window-btn active" data-hours="24" onclick="setRiskWindow(24)">24 hrs</button>
             <button type="button" class="window-btn" data-hours="48" onclick="setRiskWindow(48)">48 hrs</button>
           </div>
         </div>
@@ -629,12 +593,19 @@
           <div class="metric"><span class="metric-icon">≋</span><span>FEMA Flood Zone</span><b id="femaZone">Coming soon</b></div>
           <div class="metric"><span class="metric-icon">↕</span><span>Base Flood Elevation</span><b id="baseFloodElevation">Coming soon</b></div>
           <div class="metric"><span class="metric-icon">◉</span><span>NWS alert status</span><b id="realAlertStatus">Not checked</b></div>
-          <div class="metric"><span class="metric-icon">☔</span><span id="rainfallMetricLabel">Rainfall outlook (next 12 hrs)</span><b id="rainfallOutlook">Coming soon</b></div>
+          <div class="metric"><span class="metric-icon">☔</span><span id="rainfallMetricLabel">Rainfall outlook (next 24 hours)</span><b id="rainfallOutlook">Coming soon</b></div>
           <div class="metric"><span class="metric-icon">≋</span><span>High tide overlap</span><b id="tideOverlap">Coming soon</b></div>
-          <div class="metric"><span class="metric-icon">⌂</span><span>Neighborhood readiness</span><b id="readinessLabel">--</b></div>
-          <div class="metric"><span class="metric-icon">◷</span><span id="trendMetricLabel">Next 12 hours</span><b id="futureTrend">--</b></div>
+          <div class="metric"><span class="metric-icon">⌂</span><span>Site readiness</span><b id="readinessLabel">--</b></div>
+          <div class="metric"><span class="metric-icon">◷</span><span id="trendMetricLabel">Next 24 hours</span><b id="futureTrend">--</b></div>
           <div class="metric"><span class="metric-icon">≋</span><span>Nearest USGS gauge</span><b class="linkish" id="gaugeDistance">Coming soon</b></div>
           <div class="metric"><span class="metric-icon">☁</span><span>Notification mode</span><b class="ready">Ready</b></div>
+        </div>
+
+        <div class="score-breakdown">
+          <h3>Score breakdown</h3>
+          <div class="breakdown-list" id="breakdownList">
+            <div class="breakdown-row"><span class="breakdown-name">Waiting for analysis</span><span class="breakdown-score">--</span><div class="component-bar"><div class="component-fill"></div></div></div>
+          </div>
         </div>
 
         <div class="assessment">
@@ -657,8 +628,8 @@
         </div>
 
         <div class="feature">
-          <h3>Flood Risk Score</h3>
-          <p>A coded risk engine combines rainfall, gauge trends, flood alerts, drainage context, and FEMA data into one simple score.</p>
+          <h3>Weighted Flood Risk Score</h3>
+          <p>A risk engine combines rainfall, NWS alerts, FEMA data, gauge conditions, elevation, drainage, and tide influence into one transparent score.</p>
         </div>
 
         <div class="feature">
@@ -686,11 +657,20 @@
   </main>
 
   <script>
+    let selectedWindowHours = 24;
 
-    let selectedWindowHours = 12;
+    const WEIGHTS = {
+      rainfall: 30,
+      nws: 20,
+      fema: 15,
+      usgs: 15,
+      elevation: 10,
+      drainage: 5,
+      tide: 5
+    };
 
     function getWindowText(hours = selectedWindowHours) {
-      if (hours === 0) return 'Now';
+      if (Number(hours) === 1) return 'Now';
       return `Next ${hours} hours`;
     }
 
@@ -702,15 +682,14 @@
 
       const windowText = getWindowText();
       document.getElementById('scoreWindowLabel').innerText = `Window: ${windowText}`;
-      document.getElementById('rainfallMetricLabel').innerText = selectedWindowHours === 0 ? 'Rainfall outlook' : `Rainfall outlook (${windowText.toLowerCase()})`;
+      document.getElementById('rainfallMetricLabel').innerText = selectedWindowHours === 1 ? 'Rainfall outlook' : `Rainfall outlook (${windowText.toLowerCase()})`;
       document.getElementById('trendMetricLabel').innerText = windowText;
 
       const currentAddress = document.getElementById('addressInput').value.trim();
       const hasScore = document.getElementById('scoreNumber').innerText !== '--';
-      if (currentAddress && hasScore) {
-        runSurgeWatch();
-      }
+      if (currentAddress && hasScore) runSurgeWatch();
     }
+
     function safeText(value, fallback = 'Unavailable') {
       if (value === null || value === undefined || value === '') return fallback;
       return String(value);
@@ -741,6 +720,69 @@
       return z;
     }
 
+    function clampScore(value, max) {
+      return Math.max(0, Math.min(max, Math.round(Number(value) || 0)));
+    }
+
+    function scaleToWeight(rawValue, rawMax, weightedMax) {
+      return clampScore((Number(rawValue || 0) / rawMax) * weightedMax, weightedMax);
+    }
+
+    function calculateRainfallComponent(rainRisk, rainfallInches, maxHourlyRain) {
+      if (typeof rainfallInches === 'number') {
+        if (rainfallInches >= 4 || maxHourlyRain >= 1.5) return 30;
+        if (rainfallInches >= 2.5 || maxHourlyRain >= 1) return 25;
+        if (rainfallInches >= 1.25 || maxHourlyRain >= 0.5) return 18;
+        if (rainfallInches >= 0.5 || maxHourlyRain >= 0.25) return 10;
+        if (rainfallInches > 0) return 5;
+        return 0;
+      }
+      return scaleToWeight(rainRisk, 40, WEIGHTS.rainfall);
+    }
+
+    function calculateFemaComponent(zone) {
+      const zoneUpper = normalizeFemaZone(zone).toUpperCase();
+      if (zoneUpper === 'X' || zoneUpper.includes('MINIMAL')) return 0;
+      if (zoneUpper.includes('VE') || zoneUpper === 'V') return 15;
+      if (['AE', 'A', 'AO', 'AH'].some(z => zoneUpper.includes(z))) return 13;
+      if (zoneUpper === 'UNKNOWN') return 6;
+      return 5;
+    }
+
+    function calculateElevationComponent(feet) {
+      if (typeof feet !== 'number' || Number.isNaN(feet)) return 5;
+      if (feet < 20) return 10;
+      if (feet < 100) return 7;
+      if (feet < 500) return 4;
+      return 2;
+    }
+
+    function calculateComponents({ rainRisk, rainfallInches, maxHourlyRain, alertRisk, femaZone, elevationFeet }) {
+      return [
+        { key: 'rainfall', name: 'Forecast Rainfall', score: calculateRainfallComponent(rainRisk, rainfallInches, maxHourlyRain), max: WEIGHTS.rainfall },
+        { key: 'nws', name: 'NWS Flood Alerts', score: scaleToWeight(alertRisk, 40, WEIGHTS.nws), max: WEIGHTS.nws },
+        { key: 'fema', name: 'FEMA Flood Zone', score: calculateFemaComponent(femaZone), max: WEIGHTS.fema },
+        { key: 'usgs', name: 'USGS River Conditions', score: 5, max: WEIGHTS.usgs },
+        { key: 'elevation', name: 'Ground Elevation', score: calculateElevationComponent(elevationFeet), max: WEIGHTS.elevation },
+        { key: 'drainage', name: 'Local Drainage / Urbanization', score: 3, max: WEIGHTS.drainage },
+        { key: 'tide', name: 'Tide / Coastal Influence', score: 0, max: WEIGHTS.tide }
+      ];
+    }
+
+    function renderBreakdown(components) {
+      const html = components.map(c => {
+        const pct = c.max ? Math.round((c.score / c.max) * 100) : 0;
+        return `
+          <div class="breakdown-row">
+            <span class="breakdown-name">${c.name}</span>
+            <span class="breakdown-score">${c.score} / ${c.max}</span>
+            <div class="component-bar"><div class="component-fill" style="width:${pct}%"></div></div>
+          </div>
+        `;
+      }).join('');
+      document.getElementById('breakdownList').innerHTML = html;
+    }
+
     function generateWhyThisScore(data) {
       const reasons = [];
       const add = (type, text) => reasons.push({ type, text });
@@ -748,25 +790,15 @@
       const zone = normalizeFemaZone(data.femaZone);
       const zoneUpper = zone.toUpperCase();
       const rainfallInches = data.rainfallInches;
+      const maxHourlyRain = data.maxHourlyRain;
       const feet = data.elevationFeet;
       const alertRisk = data.alertRisk || 0;
-      const rainRisk = data.rainRisk || 0;
       const gaugeRisk = data.gaugeRisk || 0;
       const tideRisk = data.tideRisk || 0;
       const drainageRisk = data.drainageRisk || 0;
       const surgeScore = data.surgeScore || 0;
       const windowText = data.windowText || getWindowText();
       const windowLower = windowText.toLowerCase();
-
-      if (zoneUpper === 'X' || zoneUpper.includes('MINIMAL')) {
-        add('good', 'FEMA identifies this location as Zone X, which is generally outside the mapped high-risk flood area.');
-      } else if (['AE', 'A', 'VE', 'V', 'AO', 'AH'].some(z => zoneUpper.includes(z))) {
-        add('high', `FEMA flood mapping shows this property in Flood Zone ${zone}, which increases mapped flood exposure.`);
-      } else if (zone !== 'Unknown') {
-        add('watch', `FEMA flood zone returned as ${zone}. This is included in the risk calculation.`);
-      } else {
-        add('watch', 'FEMA flood-zone data was not available for this location, so mapped floodplain exposure could not be fully evaluated.');
-      }
 
       if (typeof rainfallInches === 'number') {
         if (rainfallInches < 0.1) {
@@ -778,16 +810,28 @@
         } else {
           add('danger', `${rainfallInches.toFixed(2)} inches of rain is expected during ${windowLower}, which may create serious flash-flood potential.`);
         }
-      } else if (rainRisk > 10) {
-        add('high', 'Rainfall risk is elevated based on the live rainfall backend.');
       } else {
-        add('good', 'Rainfall risk is currently low based on available forecast data.');
+        add('watch', 'Rainfall forecast data was limited, so the score uses the available rainfall backend estimate.');
+      }
+
+      if (typeof maxHourlyRain === 'number' && maxHourlyRain >= 0.5) {
+        add('high', `Peak hourly rainfall may reach ${maxHourlyRain.toFixed(2)} inches/hour, which can overwhelm drainage even when total rainfall is lower.`);
       }
 
       if (alertRisk > 0) {
         add('danger', 'An official National Weather Service flood alert is active for this area.');
       } else {
         add('good', 'No active National Weather Service flood alerts currently affect this location.');
+      }
+
+      if (zoneUpper === 'X' || zoneUpper.includes('MINIMAL')) {
+        add('good', 'FEMA identifies this location as Zone X, which is generally outside the mapped high-risk flood area.');
+      } else if (['AE', 'A', 'VE', 'V', 'AO', 'AH'].some(z => zoneUpper.includes(z))) {
+        add('high', `FEMA flood mapping shows this property in Flood Zone ${zone}, which increases mapped flood exposure.`);
+      } else if (zone !== 'Unknown') {
+        add('watch', `FEMA flood zone returned as ${zone}. This is included in the risk calculation.`);
+      } else {
+        add('watch', 'FEMA flood-zone data was not available, so mapped floodplain exposure could not be fully evaluated.');
       }
 
       if (typeof feet === 'number') {
@@ -800,40 +844,29 @@
         }
       }
 
-      if (gaugeRisk > 15) {
+      if (gaugeRisk > 10) {
         add('high', 'Nearby river gauge conditions appear elevated and should be monitored.');
       } else {
-        add('good', 'Nearest USGS gauge data is connected and does not currently indicate a major river-level concern.');
+        add('good', 'Nearest USGS gauge data is connected and is included in the site assessment.');
       }
 
-      if (tideRisk > 10) {
-        add('watch', 'High tide overlap may reduce drainage capacity near tidal areas.');
-      }
+      if (tideRisk > 0) add('watch', 'High tide overlap may reduce drainage capacity near tidal areas.');
+      if (drainageRisk > 0) add('watch', 'Local drainage is included as a baseline site factor until detailed stormwater infrastructure data is added.');
 
-      if (drainageRisk > 5) {
-        add('watch', 'Urban drainage is included as a baseline risk factor until more detailed local stormwater data is added.');
-      }
-
-      let summary = 'Current conditions appear stable, but flood risk can change quickly if rainfall, river gauges, or official alerts change.';
+      let summary = `Current conditions indicate low flood risk over ${windowLower}, but flood risk can change quickly if rainfall, river gauges, or official alerts change.`;
       if (surgeScore >= 75) {
-        summary = 'Multiple live factors are contributing to very high flood risk. Monitor official guidance and avoid flooded roads.';
+        summary = `Multiple live factors are contributing to very high flood risk over ${windowLower}. Monitor official guidance and avoid flooded roads.`;
       } else if (surgeScore >= 50) {
-        summary = 'Several factors are contributing to elevated flood risk. Conditions should be monitored closely over the selected risk window.';
+        summary = `Several factors are contributing to high flood risk over ${windowLower}. Conditions should be monitored closely.`;
       } else if (surgeScore >= 25) {
-        summary = 'Some risk factors are present, but current live conditions do not indicate severe flood risk at this address.';
+        summary = `Some risk factors are present over ${windowLower}, but current live conditions do not indicate severe flood risk at this address.`;
       }
 
       return { reasons, summary };
     }
 
     function renderWhyThisScore(result) {
-      const iconByType = {
-        good: '✓',
-        watch: '•',
-        high: '!',
-        danger: '⚠'
-      };
-
+      const iconByType = { good: '✓', watch: '•', high: '!', danger: '⚠' };
       const html = result.reasons.map(reason => {
         const type = reason.type || 'watch';
         return `<li class="why-${type}"><span class="why-icon">${iconByType[type] || '•'}</span><span>${reason.text}</span></li>`;
@@ -845,7 +878,6 @@
 
     async function runSurgeWatch() {
       const input = document.getElementById('addressInput').value.trim();
-
       if (!input) {
         alert('Please enter an address or ZIP code.');
         return;
@@ -864,139 +896,105 @@
       document.getElementById('readinessLabel').innerText = '--';
       document.getElementById('futureTrend').innerText = '--';
       document.getElementById('scoreWindowLabel').innerText = `Window: ${getWindowText()}`;
-      document.getElementById('rainfallMetricLabel').innerText = selectedWindowHours === 0 ? 'Rainfall outlook' : `Rainfall outlook (${getWindowText().toLowerCase()})`;
+      document.getElementById('rainfallMetricLabel').innerText = selectedWindowHours === 1 ? 'Rainfall outlook' : `Rainfall outlook (${getWindowText().toLowerCase()})`;
       document.getElementById('trendMetricLabel').innerText = getWindowText();
       setRiskVisual(0);
+      renderBreakdown([]);
       renderWhyThisScore({ reasons: [{ type: 'watch', text: 'Running live flood-risk analysis...' }], summary: '' });
 
       try {
         const isZip = /^\d{5}$/.test(input);
-
         const geoUrl = isZip
           ? `https://nominatim.openstreetmap.org/search?format=json&limit=1&countrycodes=us&postalcode=${encodeURIComponent(input)}`
           : `https://nominatim.openstreetmap.org/search?format=json&limit=1&countrycodes=us&q=${encodeURIComponent(input)}`;
 
         const geoResponse = await fetch(geoUrl);
         const geoData = await geoResponse.json();
-
-        if (!geoData.length) {
-          throw new Error('Address not found');
-        }
+        if (!geoData.length) throw new Error('Address not found');
 
         const lat = parseFloat(geoData[0].lat);
         const lon = parseFloat(geoData[0].lon);
 
-        document.getElementById('coordsLabel').innerText =
-          lat.toFixed(4) + ', ' + lon.toFixed(4);
+        document.getElementById('coordsLabel').innerText = `${lat.toFixed(4)}, ${lon.toFixed(4)}`;
 
-        const elevationResponse = await fetch(
-          `https://api.open-meteo.com/v1/elevation?latitude=${lat}&longitude=${lon}`
-        );
-
+        const elevationResponse = await fetch(`https://api.open-meteo.com/v1/elevation?latitude=${lat}&longitude=${lon}`);
         const elevationData = await elevationResponse.json();
         const meters = elevationData.elevation[0];
         const feet = Math.round(meters * 3.28084);
-
         document.getElementById('elevationLabel').innerText = feet + ' ft';
 
-        const nwsResponse = await fetch(
-          'https://mlwjgbyvikhpxrthvdec.supabase.co/functions/v1/nws',
-          {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ lat, lon })
-          }
-        );
-
+        const nwsResponse = await fetch('https://mlwjgbyvikhpxrthvdec.supabase.co/functions/v1/nws', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ lat, lon })
+        });
         const nwsData = await nwsResponse.json();
         document.getElementById('realAlertStatus').innerText = safeText(nwsData.alertText, 'Unavailable');
         const alertRisk = Number(nwsData.alertRisk || 0);
 
-        let elevationRisk = 0;
-        if (feet < 20) {
-          elevationRisk = 35;
-        } else if (feet < 100) {
-          elevationRisk = 22;
-        } else if (feet < 500) {
-          elevationRisk = 10;
-        } else {
-          elevationRisk = 5;
-        }
-
-        const backendResponse = await fetch(
-          'https://mlwjgbyvikhpxrthvdec.supabase.co/functions/v1/readiness',
-          {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ lat, lon, hours: selectedWindowHours })
-          }
-        );
-
+        const backendResponse = await fetch('https://mlwjgbyvikhpxrthvdec.supabase.co/functions/v1/readiness', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ lat, lon, hours: selectedWindowHours })
+        });
         const backendData = await backendResponse.json();
         console.log('Readiness backend data:', backendData);
-        const rainRisk = Number(backendData.rainRisk || 3);
+        const rainRisk = Number(backendData.rainRisk || 0);
         const rainfallMessage = backendData.message || 'Backend rainfall unavailable';
-        const rainfallInches = parseInchesFromMessage(rainfallMessage);
+        const rainfallInches = typeof backendData.rainTotal === 'number' ? backendData.rainTotal : parseInchesFromMessage(rainfallMessage);
+        const maxHourlyRain = typeof backendData.maxHourlyRain === 'number' ? backendData.maxHourlyRain : null;
         document.getElementById('rainfallOutlook').innerText = rainfallMessage;
 
-        const femaResponse = await fetch(
-          'https://mlwjgbyvikhpxrthvdec.supabase.co/functions/v1/fema',
-          {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ lat, lon })
-          }
-        );
-
+        const femaResponse = await fetch('https://mlwjgbyvikhpxrthvdec.supabase.co/functions/v1/fema', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ lat, lon })
+        });
         const femaData = await femaResponse.json();
         const rawFemaZone = safeText(femaData.zone, 'Unavailable');
         const femaZoneDisplay = rawFemaZone.toUpperCase() === 'X' ? 'X (Minimal Risk)' : rawFemaZone;
         document.getElementById('femaZone').innerText = femaZoneDisplay;
         document.getElementById('baseFloodElevation').innerText = safeText(femaData.bfe, 'Not applicable');
 
-        const usgsResponse = await fetch(
-          'https://mlwjgbyvikhpxrthvdec.supabase.co/functions/v1/usgs',
-          {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ lat, lon })
-          }
-        );
-
+        const usgsResponse = await fetch('https://mlwjgbyvikhpxrthvdec.supabase.co/functions/v1/usgs', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ lat, lon })
+        });
         const usgsData = await usgsResponse.json();
         console.log('USGS data:', usgsData);
-        document.getElementById('gaugeDistance').innerHTML =
-          `<span style="font-size:12px;color:#9bb4d4">${safeText(usgsData.station, 'Nearest gauge')}</span><br>${safeText(usgsData.gauge, 'Unavailable')}`;
-
-        const tideRisk = 0;
-        const drainageRisk = 10;
-        const gaugeRisk = 10;
+        document.getElementById('gaugeDistance').innerHTML = `<span style="font-size:12px;color:#9bb4d4">${safeText(usgsData.station, 'Nearest gauge')}</span><br>${safeText(usgsData.gauge, 'Unavailable')}`;
 
         document.getElementById('tideOverlap').innerText = 'Backend coming soon';
 
-        const femaZoneUpper = normalizeFemaZone(rawFemaZone).toUpperCase();
-        let femaRisk = 8;
-        if (femaZoneUpper === 'X') femaRisk = 0;
-        if (['A', 'AE', 'AO', 'AH', 'VE', 'V'].some(z => femaZoneUpper.includes(z))) femaRisk = 22;
+        const components = calculateComponents({
+          rainRisk,
+          rainfallInches,
+          maxHourlyRain,
+          alertRisk,
+          femaZone: rawFemaZone,
+          elevationFeet: feet
+        });
 
-        const surgeScore = Math.min(
-          100,
-          Math.round(elevationRisk + alertRisk + rainRisk + gaugeRisk + tideRisk + drainageRisk + femaRisk)
-        );
-
+        const surgeScore = Math.min(100, components.reduce((sum, c) => sum + c.score, 0));
         const readinessScore = Math.max(0, 100 - surgeScore);
+        const gaugeRisk = components.find(c => c.key === 'usgs')?.score || 0;
+        const tideRisk = components.find(c => c.key === 'tide')?.score || 0;
+        const drainageRisk = components.find(c => c.key === 'drainage')?.score || 0;
 
         document.getElementById('scoreNumber').innerText = surgeScore;
         document.getElementById('riskLevel').innerText = getRiskLevel(surgeScore);
         document.getElementById('readinessLabel').innerText = readinessScore + ' / 100';
-        document.getElementById('futureTrend').innerText = surgeScore >= 60 ? 'Risk rising' : 'Stable for now';
+        document.getElementById('futureTrend').innerText = surgeScore >= 50 ? 'Risk rising' : 'Stable for now';
         setRiskVisual(surgeScore);
+        renderBreakdown(components);
 
         const why = generateWhyThisScore({
           surgeScore,
           elevationFeet: feet,
           femaZone: rawFemaZone,
           rainfallInches,
+          maxHourlyRain,
           rainRisk,
           alertRisk,
           gaugeRisk,
@@ -1004,11 +1002,9 @@
           drainageRisk,
           windowText: getWindowText()
         });
-
         renderWhyThisScore(why);
 
         document.getElementById('resultCard').scrollIntoView({ behavior: 'smooth', block: 'start' });
-
       } catch (error) {
         document.getElementById('coordsLabel').innerText = 'Location unavailable';
         document.getElementById('elevationLabel').innerText = 'Unavailable';
