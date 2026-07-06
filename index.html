@@ -1456,6 +1456,26 @@ Created by Nicholas Cornell • Engineering Student •
           nextHighTide: tideData.nextHighTide,
           tideExplanation: tideData.explanation
         };
+        // -----------------------------
+// Site Conditions: Soil & Drainage
+// -----------------------------
+
+let soilText = "";
+let impactText = "";
+
+if (feet < 50) {
+  soilText = "Low-lying areas often contain finer soils that drain more slowly.";
+  impactText = "Slow-draining soils may increase surface runoff and allow water to remain on the property longer after heavy rainfall.";
+} else if (feet < 300) {
+  soilText = "Mixed soils with moderate drainage characteristics are common in this area.";
+  impactText = "Drainage varies locally depending on soil type, slope, and surrounding development.";
+} else {
+  soilText = "Higher elevations generally have better natural drainage, although local soil conditions can still vary.";
+  impactText = "Water usually drains away more quickly, reducing prolonged standing water in many locations.";
+}
+
+document.getElementById("soilSummary").innerText = soilText;
+document.getElementById("soilImpact").innerText = impactText;
         renderBreakdown(breakdown, analysisContext);
         renderTimingForecast(analysisContext);
         renderConfidence(analysisContext);
